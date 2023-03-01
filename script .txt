@@ -1,12 +1,8 @@
 /************************************************************************************
  *  Created By: Tauseef Ahmad
  *  Created On: October 9, 2021
- *  
- *  Tutorial Video: https://youtu.be/yem5EysVloc
- *  My Channel: https://www.youtube.com/channel/UCOXYfOHgu-C-UfGyDcu5sYw/
- *  
+ *  Edited By : Uruha Nagamiya
  *  *********************************************************************************/
- 
  //https://docs.google.com/spreadsheets/d/1ed1q95g3PuIdnTfH5-8dcb2yTQjQGHR4wfN_ByaMJwc/edit#gid=0
 var ss = SpreadsheetApp.openById('1EqTO402-qnrAB5CIiGnjQTLnnzqS131PRHVEmqhf5qw');
 var sheet = ss.getSheetByName('Sheet1');
@@ -23,7 +19,7 @@ function doGet(e){
   var read = e.parameter.read;
 
   if (read !== undefined){
-    return ContentService.createTextOutput(sheet.getRange('A1').getValue());
+    return ContentService.createTextOutput(sheet.getRange('A2').getValue());
   }
   //----------------------------------------------------------------------------------
   //code block 2
@@ -41,74 +37,158 @@ function doGet(e){
 function update_relay_state(relay_number, relay_state){
   //------------------------------------------------
   if(relay_number == 1){
-    var range = sheet.getRange("B2");
+    var range1 = sheet.getRange("B2");
+    var range2 = sheet.getRange("J3");
     if(relay_state == 1){
-      range.setValue("ON");
+      range1.setValue("ON");
+      range2.setValue("Relay_1 ON");
     } else{
-      range.setValue("OFF");
+      range1.setValue("OFF");
+      range2.setValue("Relay_1 OFF");
     }
   }
   //------------------------------------------------
   else if(relay_number == 2){
-    var range = sheet.getRange("C2");
+    var range1 = sheet.getRange("C2");
+    var range2 = sheet.getRange("J4");
     if(relay_state == 1){
-      range.setValue("ON");
+      range1.setValue("ON");
+      range2.setValue("Relay_2 ON");
     } else{
-      range.setValue("OFF");
+      range1.setValue("OFF");
+      range2.setValue("Relay_2 OFF");
     }
   }
   //------------------------------------------------
   if(relay_number == 3){
-    var range = sheet.getRange("D2");
+    var range1 = sheet.getRange("D2");
+    var range2 = sheet.getRange("J5");
     if(relay_state == 1){
-      range.setValue("ON");
+      range1.setValue("ON");
+      range2.setValue("Relay_3 ON");
     } else{
-      range.setValue("OFF");
+      range1.setValue("OFF");
+      range2.setValue("Relay_3 OFF");
     }
   }
   //------------------------------------------------
   if(relay_number == 4){
-    var range = sheet.getRange("E2");
+    var range1 = sheet.getRange("E2");
+    var range2 = sheet.getRange("J6");
     if(relay_state == 1){
-      range.setValue("ON");
+      range1.setValue("ON");
+      range2.setValue("Relay_4 ON");
     } else{
-      range.setValue("OFF");
+      range1.setValue("OFF");
+      range2.setValue("Relay_4 OFF");
     }
   }
   //------------------------------------------------
   if(relay_number == 5){
-    var range = sheet.getRange("F2");
+    var range1 = sheet.getRange("F2");
+    var range2 = sheet.getRange("J7");
     if(relay_state == 1){
-      range.setValue("ON");
+      range1.setValue("ON");
+      range2.setValue("Relay_5 ON");
     } else{
-      range.setValue("OFF");
+      range1.setValue("OFF");
+      range2.setValue("Relay_5 OFF");
     }
   }
   //------------------------------------------------
   if(relay_number == 6){
-    var range = sheet.getRange("G2");
+    var range1 = sheet.getRange("G2");
+    var range2 = sheet.getRange("J8");
     if(relay_state == 1){
-      range.setValue("ON");
+      range1.setValue("ON");
+      range2.setValue("Relay_6 ON");
     } else{
-      range.setValue("OFF");
+      range1.setValue("OFF");
+      range2.setValue("Relay_6 OFF");
     }
   }
   //------------------------------------------------
   if(relay_number == 7){
-    var range = sheet.getRange("H2");
+    var range1 = sheet.getRange("H2");
+    var range2 = sheet.getRange("J9");
     if(relay_state == 1){
-      range.setValue("ON");
+      range1.setValue("ON");
+      range2.setValue("Relay_7 ON");
     } else{
-      range.setValue("OFF");
+      range1.setValue("OFF");
+      range2.setValue("Relay_7 OFF");
     }
   }
   //------------------------------------------------
   if(relay_number == 8){
-    var range = sheet.getRange("I2");
+    var range1= sheet.getRange("I2");
+    var range2 = sheet.getRange("J10");
     if(relay_state == 1){
-      range.setValue("ON");
+      range1.setValue("ON");
+      range2.setValue("Relay_8 ON");
     } else{
-      range.setValue("OFF");
+      range1.setValue("OFF");
+      range2.setValue("Relay_8 OFF");
+    }
+  }
+  //------------------------------------------------
+  if(relay_number == 9){
+    var range1 = sheet.getRange("B2");
+    var range2 = sheet.getRange("C2");
+    var range3 = sheet.getRange("D2");
+    var range4 = sheet.getRange("E2");
+    var range5 = sheet.getRange("F2");
+    var range6 = sheet.getRange("G2");
+    var range7 = sheet.getRange("H2");
+    var range8 = sheet.getRange("I2");
+    var range9 = sheet.getRange("J2");
+    var range10 = sheet.getRange("J3");
+    var range11 = sheet.getRange("J4");
+    var range12 = sheet.getRange("J5");
+    var range13 = sheet.getRange("J6");
+    var range14 = sheet.getRange("J7");
+    var range15 = sheet.getRange("J8");
+    var range16 = sheet.getRange("J9");
+    var range17 = sheet.getRange("J10");
+    
+    if(relay_state == 1){
+      range1.setValue("ON");
+      range2.setValue("ON");
+      range3.setValue("ON");
+      range4.setValue("ON");
+      range5.setValue("ON");
+      range6.setValue("ON");
+      range7.setValue("ON");
+      range8.setValue("ON");
+      range9.setValue("All_Relay ON");
+      range10.setValue("Relay_1 ON");
+      range11.setValue("Relay_2 ON");
+      range12.setValue("Relay_3 ON");
+      range13.setValue("Relay_4 ON");
+      range14.setValue("Relay_5 ON");
+      range15.setValue("Relay_6 ON");
+      range16.setValue("Relay_7 ON");
+      range17.setValue("Relay_8 ON");
+      
+    } else{
+      range1.setValue("OFF");
+      range2.setValue("OFF");
+      range3.setValue("OFF");
+      range4.setValue("OFF");
+      range5.setValue("OFF");
+      range6.setValue("OFF");
+      range7.setValue("OFF");
+      range8.setValue("OFF");
+      range9.setValue("All_Relay OFF");
+      range10.setValue("Relay_1 OFF");
+      range11.setValue("Relay_2 OFF");
+      range12.setValue("Relay_3 OFF");
+      range13.setValue("Relay_4 OFF");
+      range14.setValue("Relay_5 OFF");
+      range15.setValue("Relay_6 OFF");
+      range16.setValue("Relay_7 OFF");
+      range17.setValue("Relay_8 OFF");
+      
     }
   }
   //------------------------------------------------
